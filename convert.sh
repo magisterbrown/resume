@@ -1,1 +1,1 @@
-pdflatex -jobname=ArturBrodovicResume template.tex
+pdflatex --halt-on-error -jobname=ArturBrodovicResume template.tex 

@@ -1,0 +1,25 @@
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tikz}
+%\usepackage{helvet}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+%\usepackage{tgtermes}
+
+
+\definecolor{darkgreen}{HTML}{397249}
+\definecolor{lightgreen}{HTML}{9CB770}
+
+\titleformat{\section}
+{\color{darkgreen}\fontsize{15}{0}\selectfont\bfseries}
+{}
+{0em}
+{}
+
+\titleformat{\subsection}
+{\color{darkgreen}\fontsize{25}{15}\selectfont\bfseries}
+{}
+{0em}
+{\begin{tikzpicture} \draw[lightgreen, fill=lightgreen] (0,0) rectangle (100pt,0.3); \end{tikzpicture}  }
