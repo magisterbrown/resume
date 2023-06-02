@@ -1,23 +1,51 @@
 \usepackage{titlesec}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \usepackage{tikz}
+\usepackage{titling}
+\usepackage{array}
+\usepackage[margin=1in]{geometry}
+\usepackage{tabularx}
 
-\usepackage[fontsize=14pt]{fontsize}
+
+\usepackage[fontsize=12pt]{fontsize}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
+\def\lblock{70pt}
 
 \definecolor{darkgreen}{HTML}{397249}
 \definecolor{lightgreen}{HTML}{9CB770}
+\definecolor{grey}{HTML}{757575}
 
 \titleformat{\section}
-{\color{darkgreen}\fontsize{15}{0}\selectfont\bfseries}
+{\color{darkgreen}\fontsize{13}{0}\selectfont\bfseries}
 {}
 {0em}
 {}
 
 \titleformat{\subsection}
-{\color{darkgreen}\fontsize{25}{15}\selectfont\bfseries}
+{\color{darkgreen}\fontsize{17}{0}\selectfont\bfseries}
 {}
 {0em}
-{\begin{tikzpicture} \draw[lightgreen, fill=lightgreen] (0,0) rectangle (130pt,0.3); \end{tikzpicture}  }
+{\begin{tikzpicture} \draw[lightgreen, fill=lightgreen] (0,0) rectangle (\lblock,0.2); \end{tikzpicture}\hspace{6pt}}
+
+\renewcommand{\maketitle}{
+    \begin{center}
+        {\color{grey}\fontsize{25}{0}\bfseries\theauthor}
+        \vspace{.25em}
+    \end{center}
+}
+
+\newcommand{\cvitem}[4]{
+    \setlength{\tabcolsep}{0pt}
+    \setlength{\arrayrulewidth}{7.2pt}
+    \arrayrulecolor[HTML]{FFFFFF}
+    \begin{tabular}%
+  {>{\raggedleft\arraybackslash}p{\lblock}|
+   >{\raggedright\arraybackslash}p{400px}%
+  }
+     #1 & {\bfseries#2} #3 \\
+     \hline \\[-3.2em]
+     & #4
+\end{tabular}
+}
