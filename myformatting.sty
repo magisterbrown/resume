@@ -5,6 +5,7 @@
 \usepackage{array}
 \usepackage[margin=1in]{geometry}
 \usepackage{tabularx}
+\usepackage{multirow}
 
 
 \usepackage[fontsize=12pt]{fontsize}
@@ -41,11 +42,10 @@
     \setlength{\arrayrulewidth}{7.2pt}
     \arrayrulecolor[HTML]{FFFFFF}
     \begin{tabular}%
-  {>{\raggedleft\arraybackslash}p{\lblock}|
+  {p{\lblock}|
    >{\raggedright\arraybackslash}p{400px}%
   }
-     #1 & {\bfseries#2} #3 \\
-     \hline \\[-3.2em]
-     & #4
+        \multirow[t]{2}{\lblock}{\raggedleft #1} & {\bfseries#2} #3 \\
+        & #4  \\ \hline 
 \end{tabular}
 }
