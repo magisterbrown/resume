@@ -3,16 +3,24 @@
 \usepackage{tikz}
 \usepackage{titling}
 \usepackage{array}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.8in]{geometry}
 \usepackage{tabularx}
 \usepackage{multirow}
+\usepackage{longtable}
+\usepackage{svg}
+
+\setlength\LTpre{0pt}
+\setlength\LTpost{0pt}
 
 
-\usepackage[fontsize=12pt]{fontsize}
+\usepackage[fontsize=10pt]{fontsize}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
-\def\lblock{75pt}
+\def\lblock{68pt}
+
+\footskip=0pt
+\pagenumbering{gobble}
 
 \definecolor{darkgreen}{HTML}{397249}
 \definecolor{lightgreen}{HTML}{9CB770}
@@ -41,11 +49,16 @@
     \setlength{\tabcolsep}{0pt}
     \setlength{\arrayrulewidth}{7.2pt}
     \arrayrulecolor[HTML]{FFFFFF}
-    \begin{tabular}%
+    \begin{longtable}%
   {p{\lblock}|
-   >{\raggedright\arraybackslash}p{400px}%
+   >{\raggedright\arraybackslash}p{440px}%
   }
         \multirow[t]{2}{\lblock}{\raggedleft #1} & {\bfseries#2} #3 \\
-        & #4  \\ 
-\end{tabular}
+        & #4   
+\end{longtable}
+}
+
+\newcommand{\skillitem}[2]{
+    {\bfseries #1:} #2 \\
+    \\[-0.8em]
 }

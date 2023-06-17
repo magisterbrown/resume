@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{myformatting}
+\usepackage[hidelinks]{hyperref}
 
 \begin{document}
 \title{Resume}
@@ -15,48 +16,86 @@
     Email & artur.brodovic@gmail.com \\
     Number & +31613932227 \\
     Address & Delft, 2624AW Gildestraat 25 \\
+    \includesvg[width=0.2in]{github.svg} & \url{https://github.com/magisterbrown}\\
+    \includesvg[width=0.2in]{linkedin.svg} & \url{https://www.linkedin.com/in/artur-brodovic}\\
     \\[-1.0em] \hline 
 \end{tabular}
 \subsection{Education}
 \cvitem
 {2020-2024 (expected)}
-{BSc Computer Science and Engineering}
+{\href{https://www.tudelft.nl/onderwijs/opleidingen/bachelors/cse/bsc-computer-science-and-engineering}{BSc Computer Science and Engineering}}
 {/ TU Delft}
-{I am currently 3d year student. During studies I learned about variety of technologies and gained a lot of team working experience.}
+{I am currently in a final year of my degree. During studies: 
+\begin{itemize}
+\setlength\itemsep{0.25em}
+\item Learned how to efficiently design software from scratch in a Team using UML and architecture patterns. 
+\item Implement multiple web projects using SpringBoot, typescript and other technologies.
+\item Worked using an Agile and Scrum methods. 
+\item Got a strong theoretical foundation in Algorithms, Data Structures, Computer Graphics and Cryptography. 
+\item Followed an elective track on low level programming of the Operating systems and Embedded Software.
+\end{itemize}
+}
 \cvitem
 {2019-2020}
-{Vilnius School of AI}
+{\href{https://www.linkedin.com/school/vilnius-school-of-ai/?originalSubdomain=lt}{Vilnius School of AI}}
 {}
-{Ai focused community in Lithuania. There I learned about topics related to data analysis from Data science to Deep learning and developed multiple Ai related projects including analysis of Board games marked and Image clustering system based on cnn.}
+{Ai focused community in Lithuania. There my fascination with competitive AI on platforms like Kaggle has started. I studied topics ranging from Data science to Deep learning and developed multiple AI related projects including analysis of Board games marked and Image clustering system based on pretrained CNN output vectors.}
 \cvitem
 {2016-2020}
-{Sofijos Kovalevskajos gymazium}
+{\href{https://skg.lt/}{Sofijos Kovalevskajos gymazium}}
 {/ Vilnius}
-{My highscool where I choose focus on the Math, Informatics and Physics.}
+{My high school where I focused on Math, Informatics and Physics.}
 
 \subsection{Work Experience}
 
 \cvitem
 {2023}
-{Software Engineer Intern, \newline IoT Predictive maintenance project:}
-{ MakeTek}
-{During my studies I worked a part time developer job at Everspring - dropshipping company that directly connects retailers and growers. During my work I got experience of}
+{Software Engineer Intern, IoT Predictive maintenance project:}
+{ \href{https://www.maketek.nl/}{MakeTek}/\href{https://www.eaglescience.nl/}{Eaglescience}}
+{In a team of 5 students, we developed a failure detection system for elderly assistant tools. I worked on a presentation dashboard using Angular and Django REST framework. Also created anomalies detection on device model with sklearn, that used online learning to stay up to date with new system behavior patterns. Finally, we prepared our system for deployment on RasberryPI based home stations using Docker.}
 \cvitem
 {2022-2023}
-{Full stack delveloper Django/ReactJS:}
-{ Everspring}
-{During my studies I worked a part time developer job at Everspring - dropshipping company that directly connects retailers and growers. During my work I got experience of}
+{Full stack developer Django/ReactJS:}
+{ \href{https://everspring.app/nl/home}{Everspring}}
+{I worked as a part-time developer at a drop-shipping company that directly connects retailers and growers. During my work, I:
+\begin{itemize}
+    \item Got experience of working and researching a large system that includes 30+
+microservices in a mixed team of remote and in person developers.
+    \item Developed from the ground plugin that distributed more than a 1000+ products from our system into hundreds Shopify stores, in a concurrent manner, while also processing customer orders. I implemented back-end using Django, front-end using ReactJS, API integration with GraphQL and custom authentication using JWT.
+\end{itemize}}
 \cvitem
 {2021-Present}
 {Software Engineer / Mentor:}
-{ Dream Team Epoch}
-{During first year of my studies I was Software engineer at the AI focused TU Delft dream team. We competed in worldwide AI competitions on kaggle and other platforms. I got experience with variety of deep learinig challenges and used Computer Vision, NLP and Reinforcement learinig techniques.}
+{ \href{https://www.teamepoch.net/}{Dream Team Epoch}}
+{I was a Software engineer at AI focused TU Delft dream team. There I got experience of solving different deep learning challenges and used Computer Vision, NLP and Reinforcement learning techniques under a strict time constraints. Also, I used AWS for model training. We competed in worldwide AI competitions on Kaggle and other platforms and were ranked among best teams on the leader board:
+\begin{itemize}
+    \item \href{https://www.drivendata.org/competitions/82/competition-wildlife-video-depth-estimation/}{Deep Chimpact: Depth Estimation for Wildlife Conservation} (Top 4\%)
+    \item \href{https://zindi.africa/competitions/kenyan-sign-language-classification-challenge}{Task Mate Kenyan Sign Language Classification Challenge} (Top 8\%)
+    \item \href{https://zindi.africa/competitions/hulkshare-recommendation-algorithm-challenge}{Hulkshare Recommendation Algorithm Challenge} (Top 2\%)
+\end{itemize}}
 \cvitem
 {2017-2018}
 {Full-stack developer}
-{}
-{Shortly after starting to get into the world of computers I decided to try my skills in a real world and completed multiple projects with PHP and JS that I found on free-lance websites.}
+{: Freelance}
+{Shortly after starting to get into the world of computers, I decided to try my skills in a real world and completed multiple projects with PHP, WordPress and JS that I found on Freelance websites.}
 
 \subsection{Technical Skills}
+
+\skillitem{Programming languages}{Python, Java, C++, C, PHP, JavaScript, Typescript, Shell script}
+\skillitem{Key Technologies}{Django, ReactJS, Angular, SpringBoot, CMake, PyTorch, Linux, Docker}
+\skillitem{Markup}{HTML, CSS, LaTeX}
+\skillitem{APIs}{REST API, GraphQL}
+\skillitem{Cloud services}{AWS, GCS}
+\\[-2.5em]
+\subsection{Non-technical}
+
+\begin{itemize}
+    \item Human Languages:
+    \begin{itemize}
+        \item English (Fluent)
+        \item Lithuanian (Fluent)
+        \item Russian (Native)
+    \end{itemize}
+\end{itemize}
 
 \end{document}
