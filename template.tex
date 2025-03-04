@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{myformatting}
 \usepackage[hidelinks]{hyperref}
+\usepackage{calc}
 
 \begin{document}
 \title{Resume}
@@ -15,14 +16,30 @@
     \hline \\[-1.0em]
     Email & artur.brodovic@gmail.com \\
     Number & +31613932227 \\
-    Address & Delft, 2624AW Gildestraat 25 \\
-    \includesvg[width=0.2in]{github.svg} & \url{https://github.com/magisterbrown}\\
-    \includesvg[width=0.2in]{linkedin.svg} & \url{https://www.linkedin.com/in/artur-brodovic}\\
+    Address & Delft, 2624AW Gildestraat 25 
+\vspace{0.3em} \\
+    \includesvg[width=0.2in]{github.svg} & \raisebox{0.4em}{\url{https://github.com/magisterbrown}}\\
+    \includesvg[width=0.2in]{linkedin.svg} & \raisebox{0.4em}{\url{https://www.linkedin.com/in/artur-brodovic}}\\
+
     \\[-1.0em] \hline 
 \end{tabular}
 \subsection{Education}
 \cvitem
-{2020-2024 (expected)}
+{2024-2026}
+{\href{https://www.tudelft.nl/onderwijs/opleidingen/masters/cese/msc-computer-embedded-systems-engineering}{MSc Computer \& Embedded Systems Engineering }}
+{/ TU Delft}
+{I am currently in a final year of my degree. During studies: 
+\begin{itemize}
+\setlength\itemsep{0.25em}
+\item Learned how to efficiently design software from scratch in a Team using UML and architecture patterns. 
+\item Implement multiple web projects using SpringBoot, typescript and other technologies.
+\item Worked using an Agile and Scrum methods. 
+\item Got a strong theoretical foundation in Algorithms, Data Structures, Computer Graphics and Cryptography. 
+\item Followed an elective track on low level programming of the Operating systems and Embedded Software.
+\end{itemize}
+}
+\cvitem
+{2020-2024}
 {\href{https://www.tudelft.nl/onderwijs/opleidingen/bachelors/cse/bsc-computer-science-and-engineering}{BSc Computer Science and Engineering}}
 {/ TU Delft}
 {I am currently in a final year of my degree. During studies: 
@@ -49,39 +66,58 @@
 \subsection{Work Experience}
 
 \cvitem
+{2023-2025}
+{Product Specialist:}
+{ \href{https://ubiops.com/}{Ubiops}}
+{
+I was a Product Specialist at Ubiops, an AI deployment and orchestration company, where my role involved a broad set of tasks: 
+\begin{itemize}
+\item Extending deployment platform to support ARM-based nodes. 
+\item Integrating AMD GPUs and Graphcore IPUs with autoscaling algorithm. 
+\item Managed complex Docker container infrastructure over a range of diverse machines. 
+\item Demonstrated latest LLM inference and finetuning on Ubiops platform.
+\end{itemize}
+}
+\cvitem
 {2023}
 {Software Engineer Intern, IoT Predictive maintenance project:}
 { \href{https://www.maketek.nl/}{MakeTek}/\href{https://www.eaglescience.nl/}{Eaglescience}}
-{In a team of 5 students, we developed a failure detection system for elderly assistant tools. I worked on a presentation dashboard using Angular and Django REST framework. Also created anomalies detection on device model with sklearn, that used online learning to stay up to date with new system behavior patterns. Finally, we prepared our system for deployment on RasberryPI based home stations using Docker.}
+{We developed a failure detection system for elderly care tools in a 5-person team, feturing:
+\begin{itemize}
+\item Sklearn-based anomaly detection with online learning, deployed on RaspberryPi devices.
+\item Centralized dashboard powered by Django backend and React web app.
+\end{itemize}
+}
 \cvitem
 {2022-2023}
 {Full stack developer Django/ReactJS:}
 { \href{https://everspring.app/nl/home}{Everspring}}
 {I worked as a part-time developer at a drop-shipping company that directly connects retailers and growers. During my work, I:
 \begin{itemize}
-    \item Got experience of working and researching a large system that includes 30+
-microservices in a mixed team of remote and in person developers.
-    \item Developed from the ground plugin that distributed more than a 1000+ products from our system into hundreds Shopify stores, in a concurrent manner, while also processing customer orders. I implemented back-end using Django, front-end using ReactJS, API integration with GraphQL and custom authentication using JWT.
+    \item Worked on a complex architecture comprising 30+ microservices within a hybrid team of remote and on-site developers.
+    \item Architected a high-performance plugin using Django, ReactJS, GraphQL, and JWT, which distributed over 1000 products to hundreds of Shopify stores concurrently while processing customer orders.
 \end{itemize}}
 \cvitem
 {2021-Present}
 {Software Engineer / Mentor:}
 { \href{https://www.teamepoch.net/}{Dream Team Epoch}}
-{I was a Software engineer at AI focused TU Delft dream team. There I got experience of solving different deep learning challenges and used Computer Vision, NLP and Reinforcement learning techniques under a strict time constraints. Also, I used AWS for model training. We competed in worldwide AI competitions on Kaggle and other platforms and were ranked among best teams on the leader board:
+{I was a Software engineer at AI focused TU Delft dream team. There I got experience of solving different deep learning challenges and used Computer Vision, NLP and Reinforcement learning techniques under a strict time constraints.  We competed in worldwide AI competitions on Kaggle and other platforms and were ranked among best teams on the leader board:
 \begin{itemize}
     \item \href{https://www.drivendata.org/competitions/82/competition-wildlife-video-depth-estimation/}{Deep Chimpact: Depth Estimation for Wildlife Conservation} (Top 4\%)
     \item \href{https://zindi.africa/competitions/kenyan-sign-language-classification-challenge}{Task Mate Kenyan Sign Language Classification Challenge} (Top 8\%)
     \item \href{https://zindi.africa/competitions/hulkshare-recommendation-algorithm-challenge}{Hulkshare Recommendation Algorithm Challenge} (Top 2\%)
-\end{itemize}}
+\end{itemize}
+Later I remained engaged in a team as Mentor, providing theoretical insights and coding advice to following teams, helping them achieve victories in several competitions.
+}
 \cvitem
 {2017-2018}
 {Full-stack developer}
 {: Freelance}
-{Shortly after starting to get into the world of computers, I decided to try my skills in a real world and completed multiple projects with PHP, WordPress and JS that I found on Freelance websites.}
+{During summer breaks, I did freelance projects that involved enhancing websites using PHP, WordPress and JavaScript.}
 
 \subsection{Technical Skills}
 
-\skillitem{Programming languages}{Python, Java, C++, C, PHP, JavaScript, Typescript, Shell script}
+\skillitem{Programming languages}{Python, Java, C++, C, PHP, JavaScript, Typescript, Verilog/SystemVerilog}
 \skillitem{Key Technologies}{Django, ReactJS, Angular, SpringBoot, CMake, PyTorch, Linux, Docker}
 \skillitem{Markup}{HTML, CSS, LaTeX}
 \skillitem{APIs}{REST API, GraphQL}
